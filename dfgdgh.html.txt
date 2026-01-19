@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Пример span с JavaScript</title>
+  <style>
+    .highlight {
+      color: red;
+      cursor: pointer; /* делает слово кликабельным */
+      transition: color 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <p>Нажми на слово <span id="clickable" class="highlight">привет</span>!</p>
+
+  <script>
+    const word = document.getElementById("clickable");
+
+    word.addEventListener("click", () => {
+      // Меняем цвет при клике
+      if (word.style.color === "red") {
+        word.style.color = "green";
+      } else {
+        word.style.color = "red";
+      }
+    });
+  </script>
+</body>
+</html>
